@@ -1,0 +1,15 @@
+
+name: firetracer workflow
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch from Github | 
+        uses: actions/checkout@v2
+      - name: Testing | 
+        run: echo Works
+       
