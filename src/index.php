@@ -14,6 +14,13 @@
     <meta property="og:url" content="https://firetracer.io/"/>
     <meta property="og:image" content="https://firetracer.io/assets/brand/firetracer.png"/>
     <meta property="og:site_name" content="firetracer"/>
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@firetracer">
+    <meta property="twitter:creator" content="@firetracer">
+    <meta property="twitter:description" content="With firetracer, follow the evolution of forest fires in France and in the world.">
+    <meta property="twitter:title" content="firetracer">
+    <meta property="twitter:image:src" content="https://firetracer.io/assets/brand/firetracer_shortcut_v2.png">
+    <meta property="twitter:image:alt" content="firetracer">
     <title>firetracer</title>
     <link rel="shortcut icon" href="assets/brand/firetracer_shortcut_v2.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
