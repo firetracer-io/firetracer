@@ -14,20 +14,22 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5>Contributing</h5>
                     <ul class="list-unstyled mb-0">
-                        <li><a href="login.php" class="text-decoration-none text-dark">Login</a></li>
-                        <li><a href="signup.php" class="text-decoration-none text-dark">Sign up</a></li>
+                        <li><a href="redirect.php?url=twitter" target="_blank" class="text-decoration-none text-dark">Subscribe to our Twitter</a></li>
+                        <li><a href="redirect.php?url=facebook" target="_blank" class="text-decoration-none text-dark">Subscribe to our Facebook</a></li>
+                        <li><a href="redirect.php?url=youtube" target="_blank" class="text-decoration-none text-dark">Subscribe to our YouTube</a></li>
                         <li><a href="redirect.php?url=instagram" target="_blank" class="text-decoration-none text-dark">Subscribe to our Instagram</a></li>
                         <li><a href="redirect.php?url=github" target="_blank" class="text-decoration-none text-dark">Source code</a></li>
+                        <li><a href="redirect.php?url=gift" target="_blank" class="text-decoration-none text-dark">Gifts</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5>Policies</h5>
+                    <h5>Legal</h5>
                     <ul class="list-unstyled mb-0">
                         <li><a href="policies/legal-notice.php" class="text-decoration-none text-dark">Legal notice</a></li>
                         <li><a href="policies/terms-use.php" class="text-decoration-none text-dark">Terms of use</a></li>
                         <li><a href="policies/legal-notice.php#privacy" class="text-decoration-none text-dark">Privacy policy</a></li>
                         <li><a href="policies/subprocessors.php" class="text-decoration-none text-dark">Subprocessors</a></li>
-                        <li><a href="policies/license.php" class="text-decoration-none text-dark">License</a></li>
+                        <li><a href="policies/license.php" class="text-decoration-none text-dark">Licenses</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
