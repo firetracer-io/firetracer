@@ -8,12 +8,12 @@
         </div>
         <nav aria-label='footer' class="col-12 col-lg-8">
             <ul class="d-flex align-items-center flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0 h-100 list-unstyled">
-                <li class="me-4"><a href="policies/terms-use.php">Conditions d'utilisation</a></li>
-                <li class="me-4"><a href="policies/legal-notice.php">Mentions légales</a></li>
+                <li class="me-4"><a href="policies/terms-use.php">Terms of use</a></li>
+                <li class="me-4"><a href="policies/legal-notice.php">Legal notice</a></li>
                 <li class="me-4"><a href="policies/legal-notice.php#cookies">Cookies</a></li>
-                <li class="me-4"><a href="policies/legal-notice.php#privacy">Confidentialité</a></li>
+                <li class="me-4"><a href="policies/legal-notice.php#privacy">Privacy</a></li>
                 <li class="me-4"><a href="contact.php">Contact</a></li>
-                <li class="me-4"><a href="contributors.php">Contributeurs</a></li>
+                <li class="me-4"><a href="contributors.php">Contributors</a></li>
                 <li class="me-4"><a href="redirect.php?url=blog">Blog</a></li>
                 <li><a href="about.php">About</a></li>
             </ul>
