@@ -14,5 +14,7 @@ Allow: /legal/*
 
 Disallow: /redirect.php
 Disallow: /redirect.php?
+Disallow: /embed.php
+Disallow: /embed.php?
 
 Sitemap: https://firetracer.io/sitemap.xml
