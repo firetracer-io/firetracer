@@ -10,29 +10,14 @@
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="data.php">Données</a>
+                    <a class="nav-link" href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contributors.php">Contributeurs</a>
+                    <a class="nav-link" href="contributors.php">Contributors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-
-                <?php
-                    if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['email'])){
-                        echo "
-                            <li class='nav-item'>
-                                <a class='btn btn-outline-light' href='dashboard.php'>Dashboard</a>
-                            </li>";
-                    }else{
-                        echo "
-                            <li class='nav-item d-flex gap-2'>
-                                <a class='btn btn-outline-light' href='login.php'>Login</a>
-                                <a class='btn btn-warning' href='signup.php'>Sign up</a>
-                            </li>";
-                    }
-                ?>
             </ul>
         </div>
     </div>
