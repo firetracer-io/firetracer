@@ -1,0 +1,43 @@
+/* firetracer */
+
+img.brand{
+    width: 50px;
+    height: auto;
+}
+
+code, pre{
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#datas .data{
+    border: solid 1px #1f1F1f;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100px;
+    width:100%;
+    transition: all 0.3s ease;
+}
+
+#datas .data p{
+    margin-bottom: 0;
+}
+
+#datas .data span{
+    font-weight: 700;
+    font-size: 32px;
+}
+
+#datas .data:hover{
+    color: #fff;
+    background-color: #1f1F1f;
+}
+
+#datas pre{
+    max-width: 903px !important;
+}
+
+#iframe-data{
+    transition: all 0.3s ease;
+}
