@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body id="datas">
-
-    
     
     <?php include 'includes/navbar.php' ?>
 
@@ -78,8 +76,6 @@
             <div class="row">
                 <?php
                     while($data = $q_next->fetch()){
-                        // echo $data['name'];
-                        // echo $data['value'];
                         ?>
                         <div class="data d-flex gap-3 align-items-center col-lg-3 col-12 m-3">
                             <p><?= $traductions[$data['name']] ?></p>
@@ -102,8 +98,8 @@
         <p>Integrate this data on your site now (for free) <a href="javascript:showIframeData()">here</a>.</p>
         <div id="iframe-data" class="d-none">
             <p>Copy the code below : </p>
-            <pre>&lt;iframe src="https://firetracer.io/embed.php?rcs=datas&id=0" width="100%" height="300" name="firetracer datas" sandbox=""&gt;&lt;/iframe&gt;</pre>
-            <p>And paste it into your source code.</p>
+            <pre>&lt;iframe src="https://firetracer.io/embed.php?rcs=datas&id=0" width="100%" height="300" name="Datas - firetracer" sandbox=""&gt;&lt;/iframe&gt; <button class="btn btn-outline-light btn-embed-api" onclick="copy_embed_api(event,'datas',0,'All datas');" title="Copy code"><i class="bi bi-clipboard"></i></a></pre>
+            <p>And paste it into your source code. This code will include all the datas above.</p>
             <p class="alert alert-success">Since this element is an iframe, and therefore a part of our site, you don't have to replace the link every time you update it.</p>
             <a href="https://firetracer.io/legal/terms-use.php#embed-api" target="_blank" rel="noopener noreferrer">firetracer Embed API terms of use</a>
         </div>
