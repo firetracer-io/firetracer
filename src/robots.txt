@@ -1,7 +1,6 @@
 # firetracer.io/robots.txt
 
 User-Agent: *
-
 Allow: /
 Allow: /about.php
 Allow: /contributors.php
@@ -11,7 +10,6 @@ Allow: /article.php?
 Allow: /sources.php
 Allow: /legal.php
 Allow: /legal/*
-
 Disallow: /redirect.php
 Disallow: /redirect.php?
 Disallow: /embed.php
