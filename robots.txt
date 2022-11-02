@@ -1,0 +1,24 @@
+# firetracer.io/robots.txt
+
+User-Agent: *
+
+Allow: /
+Allow: /about.php
+Allow: /contributors.php
+Allow: /contact.php
+Allow: /data.php
+Allow: /article.php?
+Allow: /sources.php
+Allow: /policies.php
+Allow: /policies/*
+
+Disallow: /login.php
+Disallow: /signup.php
+Disallow: /logout.php
+Disallow: /dashboard.php
+Disallow: /editor.php
+Disallow: /editor.php?
+Disallow: /redirect.php
+Disallow: /redirect.php?
+
+Sitemap: https://firetracer.io/sitemap.xml
