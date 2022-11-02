@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
-    $username = "";
-    $password = "";
+    $username = getenv("DATABASE_USERNAME");
+    $password = getenv("DATABASE_PASSWORD");
     $database = "";
     
     try {
