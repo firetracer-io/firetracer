@@ -1,14 +1,11 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Avec firetracer, suivez l'évolution des feux de forêt en France et dans le monde.">
-    <meta name="keywords" content="firetracer,fire,feu,incendie,foret,france,monde,evolution,articles,graphiques,contribuer">
+    <meta name="description" content="With firetracer, follow the evolution of forest fires in France and in the world.">
+    <meta name="keywords" content="firetracer,fire,feu,incendie,foret,france,monde,world,evolution,articles,posts,graphs,graphiques,contribute">
     <meta name="copyright" content="firetracer">
     <meta name="author" content="firetracer and contributors">
     <meta name="robots" content="allow, follow">
