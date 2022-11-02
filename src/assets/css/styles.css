@@ -16,7 +16,6 @@ code, pre{
     border-radius: 5px;
     padding: 10px;
     height: 100px;
-    width:100%;
     transition: all 0.3s ease;
 }
 
@@ -32,10 +31,6 @@ code, pre{
 #datas .data:hover{
     color: #fff;
     background-color: #1f1F1f;
-}
-
-#datas pre{
-    max-width: 903px !important;
 }
 
 #iframe-data{
