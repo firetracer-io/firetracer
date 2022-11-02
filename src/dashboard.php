@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Avec firetracer, suivez l'évolution des feux de forêt en France et dans le monde.">
+    <meta name="description" content="With firetracer, follow the evolution of forest fires in France and in the world.">
     <meta name="keywords" content="firetracer,fire,feu,incendie,foret,france,monde,world,evolution,articles,posts,graphs,graphiques,contribute">
     <meta name="copyright" content="firetracer">
     <meta name="author" content="firetracer and contributors">
@@ -22,224 +22,83 @@
 </head>
 <body id="datas">
 
-    <?php
-        if(isset($_GET['iframe'])){
-            $iframe = $_GET['iframe'];
-        }else{
-            $iframe = "false";
-        }
-        if($iframe == "true"){
-    ?>
-    <!-- all datas iframe -->
-    <div class="border-bottom mb-3 pb-3">
-        <div class="data-row d-flex gap-3 mb-3">
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre d'incendies</p>
-                <span>12</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Région la plus touchée</p>
-                <span>Nouvelle Aquitaine</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de sinistrés</p>
-                <span>1200</span>
-            </div>
-        </div>
-        <div class="data-row d-flex gap-3 mb-3">
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de victimes</p>
-                <span>12</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de bléssés</p>
-                <span>50</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de disparus</p>
-                <span>12</span>
-            </div>
-        </div>
-        <div class="data-row d-flex gap-3">
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Effectifs des pompiers</p>
-                <span>12000</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Argent dépensé par l'Etat</p>
-                <span>12M</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Effectifs de pompiers étrangers</p>
-                <span>120</span>
-            </div>
-        </div>
-    </div>
-    <div class="mb-3 pb-3">
-        <h3>Par rapport à l'année précedente</h3>
-        <div class="data-row d-flex gap-3 mb-3">
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre d'incendies</p>
-                <span>+22%</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Région la plus touchée</p>
-                <span>Occitanie</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de sinistrés</p>
-                <span>+30%</span>
-            </div>
-        </div>
-        <div class="data-row d-flex gap-3 mb-3">
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de victimes</p>
-                <span>-10%</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de bléssés</p>
-                <span>-5%</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Nombre de disparus</p>
-                <span>+10%</span>
-            </div>
-        </div>
-        <div class="data-row d-flex gap-3">
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Effectifs des pompiers</p>
-                <span>+20%</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Argent dépensé par l'Etat</p>
-                <span>+20%</span>
-            </div>
-            <div class="data d-flex gap-3 align-items-center">
-                <p>Effectifs de pompiers étrangers</p>
-                <span>-35%</span>
-            </div>
-        </div>
-    </div>
-    <div class="fixed-bottom border-top bg-white">
-        <p class="mb-0">Data from firetracer (<a href="https://firetracer.io/" target="_blank" class="text-dark">firetracer.io</a>)</p>
-    </div>
-    <?php
-        }
-    ?>
-    <!-- / all datas iframe -->
+    
     
     <?php include 'includes/navbar.php' ?>
 
     <div class="p-3">
-        <h1 class="border-bottom mb-3 pb-3">Dashboard <span> - Dashboard wrong (firetracer is in devlopment)</span></h1>
+        <h1 class="border-bottom mb-3 pb-3 mx-3">Dashboard <span> - Dashboard wrong (firetracer is in devlopment)</span></h1>
     </div>
 
+    <?php 
+        include 'includes/database.php';
+        global $db;
+        $q = $db->query("SELECT * FROM datas");
+
+        $q_next = $db->query("SELECT * FROM datas");
+
+        $traductions = [
+            "fires_number" => "Fires number",
+            "most_affected_region" => "Most affected region",
+            "number_of_people_affected" => "Number of people affected",
+            "number_of_victims" => "Number of victims",
+            "number_of_injuries" => "Number of injuries",
+            "number_of_missing_persons" => "Number of missing persons",
+            "firefighter_personnel" => "Firefighter personnel",
+            "money_spent_by_the_government" => "Money spent by the government",
+            "number_of_foreign_firefighters" => "Number of foreign firefighters",
+        ];
+    ?>
+
     <div class="container d-flex gap-3">
-        <div>
-            <div class="border-bottom mb-3 pb-3">
-                <h3>Some numbers...</h3>
-                <div class="data-row d-flex gap-3 mb-3">
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Fires number</p>
-                        <span>12</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Most affected region</p>
-                        <span>Nouvelle Aquitaine</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of people affected</p>
-                        <span>1200</span>
-                    </div>
-                </div>
-                <div class="data-row d-flex gap-3 mb-3">
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of victims</p>
-                        <span>12</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of injuries</p>
-                        <span>50</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of missing persons</p>
-                        <span>12</span>
-                    </div>
-                </div>
-                <div class="data-row d-flex gap-3">
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Firefighter personnel</p>
-                        <span>12000</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Money spent by the government</p>
-                        <span>12M</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of foreign firefighters</p>
-                        <span>120</span>
-                    </div>
-                </div>
+        <div class="mb-3 pb-3">
+            <h3>Some numbers...</h3>
+            <div class="row border-bottom">
+                <?php
+                    while($data = $q->fetch()){
+                        // echo $data['name'];
+                        // echo $data['value'];
+                        ?>
+                        <div class="data d-flex gap-3 align-items-center col-lg-3 col-12 m-3">
+                            <p><?= $traductions[$data['name']] ?></p>
+                            <span><?= $data['value'] ?></span>
+                        </div>
+                        <?php
+                    }
+                ?>
             </div>
-            <div class="border-bottom mb-3 pb-3">
-                <h3>Compared to the previous year</h3>
-                <div class="data-row d-flex gap-3 mb-3">
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Fires number</p>
-                        <span>+22%</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Most affected region</p>
-                        <span>Occitanie</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of people affected</p>
-                        <span>+30%</span>
-                    </div>
-                </div>
-                <div class="data-row d-flex gap-3 mb-3">
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of victims</p>
-                        <span>-10%</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of injuries</p>
-                        <span>-5%</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of missing persons</p>
-                        <span>+10%</span>
-                    </div>
-                </div>
-                <div class="data-row d-flex gap-3">
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Firefighter personnel</p>
-                        <span>+20%</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Money spent by the government</p>
-                        <span>+20%</span>
-                    </div>
-                    <div class="data d-flex gap-3 align-items-center">
-                        <p>Number of foreign firefighters</p>
-                        <span>-35%</span>
-                    </div>
-                </div>
-            </div>
-            <p>Integrate this data on your site now (for free) <a href="javascript:showIframeData()">here</a>.</p>
-            <div id="iframe-data" class="d-none">
-                <p>Copy the code below : </p>
-                <pre>&lt;iframe src="https://firetracer.io/embed.php?rcs=datas&id=0" width="100%" height="300" name="firetracer datas" sandbox=""&gt;&lt;/iframe&gt;</pre>
-                <p>And paste it into your source code.</p>
-                <p class="alert alert-success">Since this element is an iframe, and therefore a part of our site, you don't have to replace the link every time you update it.</p>
-                <a href="https://firetracer.io/legal/terms-use.php#embed-api" target="_blank" rel="noopener noreferrer">firetracer Embed API terms of use</a>
+            <h3>Compared to the previous year</h3>
+            <div class="row">
+                <?php
+                    while($data = $q_next->fetch()){
+                        // echo $data['name'];
+                        // echo $data['value'];
+                        ?>
+                        <div class="data d-flex gap-3 align-items-center col-lg-3 col-12 m-3">
+                            <p><?= $traductions[$data['name']] ?></p>
+                            <span><?= $data['next_value'] ?></span>
+                        </div>
+                        <?php
+                    }
+                ?>
             </div>
         </div>
         <div>
-            <div class="data-row d-flex flex-column gap-3 text-center">
+            <div class="data-row d-flex flex-column gap-3 text-center" style="width: 200px;">
                 <p>pie chart</p>
                 <p>Causes of fire outbreaks</p>
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>Integrate this data on your site now (for free) <a href="javascript:showIframeData()">here</a>.</p>
+        <div id="iframe-data" class="d-none">
+            <p>Copy the code below : </p>
+            <pre>&lt;iframe src="https://firetracer.io/embed.php?rcs=datas&id=0" width="100%" height="300" name="firetracer datas" sandbox=""&gt;&lt;/iframe&gt;</pre>
+            <p>And paste it into your source code.</p>
+            <p class="alert alert-success">Since this element is an iframe, and therefore a part of our site, you don't have to replace the link every time you update it.</p>
+            <a href="https://firetracer.io/legal/terms-use.php#embed-api" target="_blank" rel="noopener noreferrer">firetracer Embed API terms of use</a>
         </div>
     </div>
     
