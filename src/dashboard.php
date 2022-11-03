@@ -61,12 +61,11 @@
             <div class="row border-bottom">
                 <?php
                     while($data = $q->fetch()){
-                        // echo $data['name'];
-                        // echo $data['value'];
                         ?>
                         <div class="data d-flex gap-3 align-items-center col-lg-3 col-12 m-3">
                             <p><?= $traductions[$data['name']] ?></p>
                             <span><?= $data['value'] ?></span>
+                            <button class="btn btn-outline-light btn-embed-api-data"><i class="bi bi-clipboard"></i></button>
                         </div>
                         <?php
                     }
@@ -80,6 +79,7 @@
                         <div class="data d-flex gap-3 align-items-center col-lg-3 col-12 m-3">
                             <p><?= $traductions[$data['name']] ?></p>
                             <span><?= $data['next_value'] ?></span>
+                            <button class="btn btn-outline-light btn-embed-api-data"><i class="bi bi-clipboard"></i></button>
                         </div>
                         <?php
                     }
