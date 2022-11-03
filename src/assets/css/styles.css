@@ -41,7 +41,10 @@ code, pre{
 #datas .data button{
     display: none;
     position: absolute;
+    top: 5px;
     right: 5px;
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-padding-y: 0.2rem;
 }
 
 #datas .data:hover{
