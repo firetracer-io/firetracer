@@ -65,7 +65,7 @@
                         <div class="data d-flex gap-3 align-items-center col-lg-3 col-12 m-3">
                             <p><?= $traductions[$data['name']] ?></p>
                             <span><?= $data['value'] ?></span>
-                            <button class="btn btn-outline-light btn-embed-api-data"><i class="bi bi-clipboard"></i></button>
+                            <button onclick="copy_embed_api(event,'datas',<?= $data['id'] ?>,'<?= $traductions[$data['name']] ?>');" class="btn btn-outline-light btn-embed-api-data"><i class="bi bi-clipboard"></i></button>
                         </div>
                         <?php
                     }
@@ -79,7 +79,7 @@
                         <div class="data d-flex gap-3 align-items-center col-lg-3 col-12 m-3">
                             <p><?= $traductions[$data['name']] ?></p>
                             <span><?= $data['next_value'] ?></span>
-                            <button class="btn btn-outline-light btn-embed-api-data"><i class="bi bi-clipboard"></i></button>
+                            <button onclick="copy_embed_api(event,'datas',<?= $data['id'] ?>,'<?= $traductions[$data['name']] ?>');" class="btn btn-outline-light btn-embed-api-data"><i class="bi bi-clipboard"></i></button>
                         </div>
                         <?php
                     }
