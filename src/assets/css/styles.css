@@ -26,6 +26,7 @@ code, pre{
     padding: 10px;
     height: 100px;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 #datas .data p{
@@ -37,9 +38,19 @@ code, pre{
     font-size: 32px;
 }
 
+#datas .data button{
+    display: none;
+    position: absolute;
+    right: 5px;
+}
+
 #datas .data:hover{
     color: #fff;
     background-color: #1f1F1f;
+}
+
+#datas .data:hover button{
+    display: flex;
 }
 
 #iframe-data{
