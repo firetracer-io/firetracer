@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +19,10 @@
         <p>Loading...</p>
     </div>
 
+    <?php include 'includes/footer.php' ?>
+
     <?php
-        $url = $_GET["url"];
+        $url = $_GET["url"];    
         if($url){
             if($url == "facebook"){
                 echo "<script>window.location.replace('https://facebook.com/');</script>";
@@ -32,7 +31,7 @@
             }else if($url == "twitter"){
                 echo "<script>window.location.replace('https://twitter.com/');</script>";
             }else if($url == "github"){
-                echo "<script>window.location.replace('https://github.com/');</script>";
+                echo "<script>window.location.replace('https://github.com/firetracer-io');</script>";
             }else if($url == "youtube"){
                 echo "<script>window.location.replace('https://youtube.com/');</script>";
             }else if($url == "blog"){
@@ -42,12 +41,9 @@
                 echo "<script>window.location.replace('" . $redirect_url . "');</script>";
             }
         }else{
-            echo "redirect to homepage";
             echo "<script>window.location.replace('https://firetracer.io/');</script>";
         }
     ?>
-
-    <?php include 'includes/footer.php' ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
