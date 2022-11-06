@@ -46,7 +46,7 @@
         <div id="firetracer-article-content" class="border-bottom">
             <?= $article['content'] ?>
 
-            <a href="https://twitter/<?php $article['author'] ?>" target="_blank" rel="noopener noreferrer"><?php $article['author'] ?></a>
+            <a href="https://twitter/<?php $article['author'] ?>" target="_blank" rel="noopener noreferrer"><?= $article['author'] ?></a>
         </div>
 
         <div id="firetracer-article-keywords">
